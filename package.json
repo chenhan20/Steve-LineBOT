@@ -1,17 +1,22 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
-  "private": true,
+  "name": "steveboy",
+  "version": "1.0.0",
+  "description": "請先加入\r [LINE機器人](https://line.me/R/ti/p/%40mrt3279v)",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenhan20/Steve-LineBOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenhan20/Steve-LineBOT/issues"
+  },
+  "homepage": "https://github.com/chenhan20/Steve-LineBOT#readme",
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "linebot": "^1.4.1",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11"
+    "linebot": "^1.4.1"
   }
 }
