@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/chenhan20/Steve-LineBOT#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "linebot": "^1.4.1"
   }
 }
