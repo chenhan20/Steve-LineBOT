@@ -7,8 +7,8 @@ var app = express();
 //heroku 設定  若本機請自行設定
 
 const channelId = process.env.CHANNELID;
-const channelSecret = process.env.CHANNELID;
-const channelAccessToken = process.env.CHANNELID;
+const channelSecret = process.env.CHANNELSECRET;
+const channelAccessToken = process.env.CHANNELACCESSTOKEN;
 
 // 用於辨識Line Channel的資訊
 var bot = linebot({
