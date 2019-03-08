@@ -1,7 +1,7 @@
 // 引用linebot SDK
-var linebot = require('linebot');
-var express = require('express');
-var app = express();
+const linebot = require('linebot');
+const express = require('express');
+const app = express();
 
 
 //heroku 設定  若本機請自行設定
@@ -17,6 +17,8 @@ var bot = linebot({
   channelAccessToken: channelAccessToken
 });
 
+const linebotParser = bot.parser();
+
 // 當有人傳送訊息給Bot時
 bot.on('message', function (event) {
   // event.message.text是使用者傳給bot的訊息
@@ -28,15 +30,13 @@ bot.on('message', function (event) {
   });
 });
 
-// Bot所監聽的webhook路徑與port
-bot.listen('/linewebhook', 3000, function () {
-    console.log('[BOT已準備就緒]');
+
+app.post('/linewebhook',linebotParser);
+
+app.get('/', function (req, res) {
+  res.send('Hello Welcome Steve LineBOT webpage!');
 });
 
-// app.get('/', function (req, res) {
-//   res.send('Hello LINEBOT已啟動!');
-// });
-
-// app.listen(3001, function () {
-//   console.log('Example app listening on port 3000!');
-// });
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Example app listening on port 3000!');
+});
